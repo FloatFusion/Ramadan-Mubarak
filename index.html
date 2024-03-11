@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300" rel="stylesheet">
+    <title>RAMDHAN MUBARAK</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            user-select: none;
+        }
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+        body{
+            background-color: #111;
+            overflow: hidden;
+        }
+        .wrapper{
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            color: #ddd;
+            perspective: 10px;
+            background-image: linear-gradient(#00000099, #00000099), url(PHOTOS/rm-bg.jpg);
+            background-size: cover;
+            background-position: center;
+            font-family: 'Oswald', sans-serif;
+            scroll-snap-type: y mandatory;
+            opacity: 0;
+            animation: fade 0.5s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+        .hero{
+            z-index: -1;
+            position: relative;
+            height: 100svh;
+            width: 100svw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform-style: preserve-3d;
+            scroll-snap-align: start;
+        }
+        .hero h1{
+            font-size: clamp(30px, 6svw + 1rem, 80px);
+            text-shadow: 0px 0px 20px #000, 3px 3px 0px #000;
+            opacity: 0;
+            animation: toup 0.5s ease-out forwards;
+            animation-delay: 1.1s;
+        }
+        .hero h2{
+            font-size: clamp(40px, 6svw + 1rem, 90px);
+            text-shadow: 0px 0px 20px #000, 3px 3px 0px #000;
+            margin: -30px;
+            opacity: 0;
+            animation: toup 0.5s ease-out forwards;
+            animation-delay: 1.3s;
+        }
+        .hero .p1{
+            position: absolute;
+            transform: translateZ(-10px);
+            scale: 2.5;
+            z-index: -1;
+            opacity: 0;
+            animation: opening 0.5s ease-in-out forwards;
+            animation-delay: 0.7s;
+        }
+        .hero .p2{
+            position: absolute;
+            transform: translateZ(-20px);
+            width: 400px;
+            filter: invert(1);
+            object-fit: cover;
+            z-index: -2;
+            opacity: 0;
+            animation: opening-ram 0.5s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+        .cont{
+            background-color: #111;
+            height: 100svh;
+            background-image: linear-gradient(#111111ee, #111111ee), url(PHOTOS/bg.png);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            animation: fade 0.5s ease-in-out forwards;
+            animation-delay: 2.0s;
+            scroll-snap-align: start;
+        }
+        .cont p{
+            font-family: sans-serif;
+            font-size: clamp(16px, 1.5svw + 0.5rem, 25px);
+            color: #fff;
+            margin: 0px 6rem;
+        }
+        .cont .pp1{
+            opacity: 0;
+            animation: toup 0.5s ease-out forwards;
+            animation-delay: 2.8s;
+        }
+        .cont .pp2{
+            opacity: 0;
+            animation: toup 0.5s ease-out forwards;
+            animation-delay: 3.1s;
+        }
+        .cont .pp3{
+            opacity: 0;
+            animation: toup 0.5s ease-out forwards;
+            animation-delay: 3.4s;
+        }
+        h3{
+            font-family: monospace;
+            font-size: 18px;
+            color: #ddd;
+            position: fixed;
+            bottom: 10px;
+            right: 10px
+        }
+        
+        @keyframes toup{
+            from{
+                opacity: 0;
+                transform: translateY(60px)
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px)
+            }
+        }
+        @keyframes fade{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        @keyframes opening-ram{
+            from{
+                opacity: 0;
+                scale: 6;
+            }
+            to{
+                opacity: 0.45345;
+                scale: 4;
+            }
+        }
+        @keyframes opening{
+            from{
+                opacity: 0;
+                scale: 4;
+            }
+            to{
+                opacity: 1;
+                scale: 2;
+            }
+        }
+        @media (max-width: 981px){
+            .hero .p1{
+                scale: 3
+            }
+            .cont p{
+                font-size: clamp(20px, 2svw + 0.5rem, 30px);
+        }
+        
+    </style>
+<body oncontextmenu="return false">
+    <div class="wrapper">
+      
+      
+       <div class="hero">
+           <h1>Ramadan Mubarak</h1>
+           <h2>2024</h2>
+           <img src="PHOTOS/lamp-short.png" class="p1">
+           <img src="PHOTOS/ramadan.png" class="p2">
+       </div>
+       
+       <div class="cont">
+           <p class="pp1">As the blessed month of Ramadan begins, may your heart be filled with joy, peace, and gratitude. May this holy month bring you closer to your loved ones, strengthen your faith, and shower you with countless blessings.</p><br>
+           
+           <p class="pp2">Let us embrace the spirit of Ramadan with open hearts, seeking forgiveness, practicing patience, and showing kindness to all. May our fasting and prayers be accepted, and may we emerge from this month with renewed spirits and purified souls.</p><br>
+           
+           <p class="pp3">Wishing you and your family a Ramadan filled with happiness, prosperity, and spiritual fulfillment. May Allah's blessings be upon you today and always.</p>
+       </div>
+       
+    </div>
+    <h3>Made with Love By Noman Ullhaq</h3>
+</body>
+</html>
